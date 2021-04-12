@@ -10,43 +10,61 @@
 
     <style>
         #bar {
-
-            --d: 100px;
-            --angle: 120deg;
-            --sinus: 0.9;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            padding: 10px;
+            --d: 50px;
+            --angle: -30deg;
+            --sinus: -0.5;
             /* = sinus(angle) */
 
-            background: repeating-linear-gradient(-45deg, #FEC279, #FEB358 30px, #FEC279 30px, #FEB358 60px);
+            background: repeating-linear-gradient(-45deg, #facc95, #FEB358 30px, #facc95 30px, #FEB358 60px);
             background-color: #FEB358;
             background-repeat: repeat-x;
-            height: 55px;
+            height: 50px;
             position: absolute;
             background-size: 170px 100%;
-            animation: poles 3s linear infinite;
+            animation: barberpole 2s linear infinite;
+
         }
+
 
         #bar:hover {
             background: repeating-linear-gradient(-45deg, transparent, transparent 30px, #FEC279 30px, #FEC279 60px);
             background-repeat: repeat-x;
-            height: 55px;
             position: absolute;
             background-size: 170px 100%;
-            animation: poles 2s linear infinite;
+            animation: barberpole 2s linear infinite;
+
         }
 
-        @keyframes poles {
+        @keyframes barberpole {
 
             0% {
                 background-position: calc(var(--d)/var(--sinus)) 0;
             }
 
+        }
+
+        #bar a:hover,
+        a:visited,
+        a:link,
+        a:active {
+            text-decoration: none;
+            color: #000;
+            font-size: 16px;
 
         }
 
+        #bar strong span {
+            color: grey;
 
-        #bar a {
-            color: #000;
-            font-size: 16px;
+        }
+
+        .mail-btn {
+            background-color: #FEB358;
+
         }
     </style>
 
@@ -56,18 +74,15 @@
 
 <body>
     <h1>ICA kvantum </h1>
-    <button id="bar" style="--w:80%;--d:50px;--angle:-30deg;--sinus:0.5">
-        <a href=" https://picsmart.se/butik/ica-kvantum-kungsholmen/kampanj/#/">
-            <strong>Kampanjprodukter<span style="color: rgb(92, 85, 85); ">(78 st)</span></strong>
 
-        </a>
+    <a id="bar" href=" https://picsmart.se/butik/ica-kvantum-kungsholmen/kampanj/#/">
+        <strong>Kampanjprodukter<span>(78 st)</span></strong>
 
-
-    </button>
+    </a>
 
 
 
-    <button class="mail-btn" style="background-color: #FEB358;">
+    <button class="mail-btn">
         <i class="far fa-envelope"></i>
 
     </button>
