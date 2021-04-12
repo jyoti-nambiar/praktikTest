@@ -10,16 +10,23 @@
 
     <style>
         #bar {
-            background: repeating-linear-gradient(-45deg, #96b4eb, #493fa8 30px, #96b4eb 30px, #6557e2 60px);
+
+            --d: 100px;
+            --angle: 120deg;
+            --sinus: 0.9;
+            /* = sinus(angle) */
+
+            background: repeating-linear-gradient(-45deg, #FEC279, #FEB358 30px, #FEC279 30px, #FEB358 60px);
+            background-color: #FEB358;
             background-repeat: repeat-x;
             height: 55px;
             position: absolute;
             background-size: 170px 100%;
-            animation: poles 2s linear infinite;
+            animation: poles 3s linear infinite;
         }
 
         #bar:hover {
-            background: repeating-linear-gradient(-45deg, transparent, transparent 30px, #96b4eb 30px, #6557e2 60px);
+            background: repeating-linear-gradient(-45deg, transparent, transparent 30px, #FEC279 30px, #FEC279 60px);
             background-repeat: repeat-x;
             height: 55px;
             position: absolute;
@@ -28,16 +35,13 @@
         }
 
         @keyframes poles {
+
             0% {
-                background-position: 100% 50%
+                background-position: calc(var(--d)/var(--sinus)) 0;
             }
 
-            100% {
-                background-position: -33% 50%
-            }
+
         }
-
-
 
 
         #bar a {
@@ -52,7 +56,7 @@
 
 <body>
     <h1>ICA kvantum </h1>
-    <button id="bar">
+    <button id="bar" style="--w:80%;--d:50px;--angle:-30deg;--sinus:0.5">
         <a href=" https://picsmart.se/butik/ica-kvantum-kungsholmen/kampanj/#/">
             <strong>Kampanjprodukter<span style="color: rgb(92, 85, 85); ">(78 st)</span></strong>
 
@@ -63,7 +67,7 @@
 
 
 
-    <button class="mail-btn" style="background-color: rgb(86, 86, 223);">
+    <button class="mail-btn" style="background-color: #FEB358;">
         <i class="far fa-envelope"></i>
 
     </button>
