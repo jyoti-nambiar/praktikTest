@@ -10,7 +10,16 @@
 
     <style>
         #bar {
-            background: repeating-linear-gradient(-45deg, #96b4eb, #6557e2 30px, #96b4eb 30px, #6557e2 60px);
+            background: repeating-linear-gradient(-45deg, #96b4eb, #493fa8 30px, #96b4eb 30px, #6557e2 60px);
+            background-repeat: repeat-x;
+            height: 55px;
+            position: absolute;
+            background-size: 170px 100%;
+            animation: poles 2s linear infinite;
+        }
+
+        #bar:hover {
+            background: repeating-linear-gradient(-45deg, transparent, transparent 30px, #96b4eb 30px, #6557e2 60px);
             background-repeat: repeat-x;
             height: 55px;
             position: absolute;
@@ -27,6 +36,8 @@
                 background-position: -33% 50%
             }
         }
+
+
 
 
         #bar a {
