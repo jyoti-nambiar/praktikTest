@@ -11,40 +11,33 @@
     <style>
         #bar {
             display: flex;
-            align-items: center;
             justify-items: center;
+            align-items: center;
+            align-items: center;
+            width: 200px;
+            font-size: 12px;
+            font-weight: bold;
             padding: 10px;
             --d: 50px;
             --angle: -30deg;
             --sinus: -0.6;
-            /* sinus(angle) */
-
-            background: repeating-linear-gradient(-45deg, #fad6a9, #fad6a9 30px, #FEC279 30px 30px, #FEC279 60px);
-            /*background-color: #FEB358;*/
-            background-repeat: repeat-x;
-            height: 45px;
-            width: 200px;
-            position: absolute;
+            background-color: #FEB358;
             background-size: 170px 100%;
-            animation: barberpole 1.5s linear infinite;
-
+            background-image: repeating-linear-gradient(135deg, transparent, transparent 30px, #FEC279 30px, #FEC279 60px);
+            animation: barberpole 2s linear infinite;
         }
 
         #bar:hover {
-            background: repeating-linear-gradient(-45deg, transparent, transparent 30px, #FEC279 30px, #FEC279 60px);
-            background-repeat: repeat-x;
-            position: absolute;
-            background-size: 170px 100%;
-            animation: barberpole 1.5s linear infinite;
+            background-color: white;
 
         }
+
 
         @keyframes barberpole {
 
             0% {
                 background-position: calc(var(--d)/var(--sinus)) 0;
             }
-
         }
 
         #bar a:hover,
